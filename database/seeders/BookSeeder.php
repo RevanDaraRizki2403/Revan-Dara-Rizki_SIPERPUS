@@ -14,12 +14,12 @@ class BookSeeder extends Seeder
     {
         // Membuat buku baru
        Book::create([
-            'title' => 'Naruto',
-            'author' => 'Masashi Kishimoto',
+            'title' => 'Perpus',
+            'author' => 'Tere Liye',
             'year' => 1999,
-            'publisher' => 'bandai',
-            'city' => 'Japanese',
-            'cover' => 'naruto.jpg',
+            'publisher' => 'Cahaya Abadi',
+            'city' => 'Jamaras',
+            'cover' => 'Pidi',
             'bookshelves_id' => 1,
         ]);
 

@@ -10,7 +10,7 @@ class BookshelfSeeder extends Seeder
 {
     public function run()
     {
-        Bookshelf::create(['code' => 'A01', 'name' => 'Informatika']);
-        Bookshelf::create(['code' => 'B02', 'name' => 'Sipil']);
+        Bookshelf::create(['code' => 'A1', 'name' => 'Malam Pertama dialam kubur']);
+        Bookshelf::create(['code' => 'B2', 'name' => 'kisah 25 nabi dan rosul']);
     }
 }

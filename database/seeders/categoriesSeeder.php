@@ -11,7 +11,7 @@ class categoriesSeeder extends Seeder
     public function run()
     {
         Category::create(
-            ['id'=>1, 'category' => 'Technical']
+            ['id'=>1, 'category' => 'inspiratif']
     
     );
         
