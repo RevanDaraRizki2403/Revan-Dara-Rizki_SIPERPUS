@@ -11,10 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('bookshelves', function (Blueprint $table) {
+        Schema::create('loans_detail', function (Blueprint $table) {
             $table->id();
-            $table->string('code', 10)->unique();
-            $table->string('name')->nullable(); // 255
+            
+            $table->foreignId('loan_id')->references('id')->on('loans');
+            $table->foreignId('book_id')->references('id')->on('books');
+            $table->boolean('is_return');
+            $table->timestamps();
+
+            // foreign key
         });
     }
 
@@ -23,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('bookshelves');
+        Schema::dropIfExists('loans_detail');
     }
 };

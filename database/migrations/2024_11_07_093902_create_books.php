@@ -12,18 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('books', function (Blueprint $table) {
-            $table->id(); // unsigned big integer
+            $table->id();
             $table->string('title');
             $table->string('author');
             $table->year('year');
             $table->string('publisher');
             $table->string('city');
             $table->string('cover');
-            $table->unsignedBigInteger('bookshelf_id');
+            $table->foreignId('bookshelves_id')->constrained()->onDelete('cascade');
             $table->timestamps();
-
-            $table->foreign('bookshelf_id')
-                ->references('id')->on('bookshelves');
         });
     }
 

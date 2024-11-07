@@ -6,11 +6,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Bookshelf extends Model
+class Loan extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'code', 'name'
+        'user_id', 'loan_at', 'return_at'
     ];
 }

@@ -1,29 +1,30 @@
 <?php
 
+
+
 namespace Database\Seeders;
 
-use App\Models\Bookshelf;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Book;
+use App\Models\Category;
 
 class BookSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
-    public function run(): void
+    public function run()
     {
-        $bookshelf = Bookshelf::pluck("id");
-        // $bookshelf = [1, 2, 3, 4, 5]
-        Book::create([
-            'title' => 'Matinya Burung-Burung',
-            'author' => 'GTA',
-            'year' => 2077,
-            'publisher' => 'Zahri',
-            'city' => 'Cianjur',
-            'cover' => 'https://placehold.co/512',
-            'bookshelf_id' => $bookshelf[random_int(1, count($bookshelf))],
+        // Membuat buku baru
+       Book::create([
+            'title' => 'Naruto',
+            'author' => 'Masashi Kishimoto',
+            'year' => 1999,
+            'publisher' => 'bandai',
+            'city' => 'Japanese',
+            'cover' => 'naruto.jpg',
+            'bookshelves_id' => 1,
         ]);
+
+ 
     }
 }
+
+
